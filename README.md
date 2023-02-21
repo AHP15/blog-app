@@ -51,7 +51,7 @@ After you're finished please remove all the comments and instructions!
 
 <!-- PROJECT DESCRIPTION -->
 
-# 📖 [your_project_name] <a name="about-project"></a>
+# 📖 [Blog app] <a name="about-project"></a>
 
 > This is a full-stack blog application built using ruby on rails
 
