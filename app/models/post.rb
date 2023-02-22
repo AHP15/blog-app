@@ -1,7 +1,8 @@
 class Post < ApplicationRecord
-  belongs_to :user
+  belongs_to :user, class_name: 'User'
+  has_many :comments, foreign_key: 'post_id'
+  has_many :likes, foreign_key: 'post_id'
 
-  scope :last_user_posts, ->(user_id) { where(user_id:).last(3) }
-  scope :increace_comments_count, ->(post_id) { find_by(id: post_id).increment!(:comments_counter) }
-  scope :increace_likes_count, ->(post_id) { find_by(id: post_id).increment!(:likes_counter) }
+  scope :increace_posts_count, ->(user_id) { User.find_by(id: user_id).increment!(:posts_counter) }
+  scope :last_post_comments, ->(post_id) { Comment.where(post_id:).last(5) }
 end
