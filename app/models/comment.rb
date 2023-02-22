@@ -1,4 +1,6 @@
 class Comment < ApplicationRecord
-  belongs_to :author_id
-  belongs_to :post_id
+  belongs_to :user
+  belongs_to :post
+
+  scope :last_post_comments, ->(post_id) { where(post_id: post_id).last(5) }
 end
