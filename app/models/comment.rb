@@ -1,4 +1,6 @@
 class Comment < ApplicationRecord
-  belongs_to :author_id
-  belongs_to :post_id
+  belongs_to :user, class_name: 'User'
+  belongs_to :post, class_name: 'Post'
+
+  scope :increace_comments_count, ->(post_id) { Post.find_by(id: post_id).increment!(:comments_counter) }
 end
