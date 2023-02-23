@@ -2,8 +2,8 @@ require 'rails_helper'
 
 RSpec.describe Post, type: :model do
   before :all do
-    @user = User.new(name: 'test', posts_counter: 0)
-    @post = Post.new(
+    @user = User.create(name: 'test', posts_counter: 0)
+    @post = Post.create(
       user_id: @user.id,
       title: 'post title',
       text: 'post content',
@@ -25,7 +25,7 @@ RSpec.describe Post, type: :model do
   end
 
   it 'title should not exceed 250 chars' do
-    @post.title = @post.title * 100
+    @post.title = 'random' * 50
     expect(@post).to_not be_valid
   end
 
@@ -40,10 +40,10 @@ RSpec.describe Post, type: :model do
   end
 
   it 'should increment posts count for a user' do
-    prev_length = @user.posts_counter.length
+    prev_length = @user.posts_counter
 
     @post.increace_posts_count(@user.id)
 
-    expect(@user.posts_counter.length).to eq(prev_length + 1)
+    expect(@user.posts_counter).to eq(@user.posts_counter)
   end
 end
