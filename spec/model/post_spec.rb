@@ -40,8 +40,6 @@ RSpec.describe Post, type: :model do
   end
 
   it 'should increment posts count for a user' do
-    prev_length = @user.posts_counter
-
     @post.increace_posts_count(@user.id)
 
     expect(@user.posts_counter).to eq(@user.posts_counter)

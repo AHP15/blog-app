@@ -18,8 +18,6 @@ RSpec.describe Like, type: :model do
   end
 
   it 'should increment likes count for a post' do
-    prev_length = @post.likes_counter
-
     @like.increace_likes_count(@post.id)
 
     expect(@post.likes_counter).to eq(@post.likes_counter)

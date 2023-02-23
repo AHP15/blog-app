@@ -18,8 +18,6 @@ RSpec.describe Comment, type: :model do
   end
 
   it 'should increment comments count for a post' do
-    prev_length = @post.comments_counter
-
     @comment.increace_comments_count(@post.id)
 
     expect(@post.comments_counter).to eq(@post.comments_counter)
