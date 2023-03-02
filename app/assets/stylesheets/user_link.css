@@ -1,0 +1,44 @@
+.user_link {
+  display: flex;
+  align-items: center;
+  margin: 5px;
+  padding: 15px;
+  text-decoration: none;
+  color: black;
+  transition: 0.3s;
+  border-radius: 5px;
+}
+
+.user_link:hover {
+  box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.3);
+}
+
+.user_link img {
+  width: 150px;
+  height: 150px;
+  object-fit: contain;
+  box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.3);
+  height: fit-content;
+}
+
+.user_link .user_info {
+  margin-left: 20px;
+  box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.3);
+  padding: 15px;
+  flex: 1;
+  height: 100px;
+  position: relative;
+  border-radius: 5px;
+}
+
+.user_link .user_info p {
+  position: absolute;
+  bottom: 5px;
+  right: 10px;
+}
+
+@media (min-width: 768px) {
+  .user_link .user_info h2 {
+    font-size: 2rem;
+  }
+}

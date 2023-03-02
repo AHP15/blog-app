@@ -7,10 +7,17 @@
     <%= csp_meta_tag %>
 
     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
+    <%= stylesheet_link_tag "user_link", "data-turbo-track": "reload" %>
+    <%= stylesheet_link_tag "post_link", "data-turbo-track": "reload" %>
+    <%= stylesheet_link_tag "user", "data-turbo-track": "reload" %>
+    <%= stylesheet_link_tag "all_posts", "data-turbo-track": "reload" %>
+    <%= stylesheet_link_tag "post", "data-turbo-track": "reload" %>
     <%= javascript_importmap_tags %>
   </head>
 
   <body>
-    <%= yield %>
+    <main>
+      <%= yield %>
+    </main>
   </body>
 </html>

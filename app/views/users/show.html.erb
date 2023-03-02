@@ -1,9 +1,14 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <title>index</title>
-  </head>
-  <body>
-    <h1>Here is a user profile</h1>
-  </body>
-</html>
+<%= render "shared/user_link", user: @user %>
+<section class="user_bio">
+  <h3>Bio</h3>
+  <p><%= @user.bio %></p>
+</section>
+<section>
+  <% @last_posts.each do |post| %>
+    <%= render "shared/post_link", post: post, user: @user %>
+  <% end %>
+</section>
+
+<a href=<%= "/users/#{@user.id}/posts" %> class="all_posts_link">
+  See all posts
+</a>

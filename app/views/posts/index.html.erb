@@ -1,9 +1,17 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <title>index</title>
-  </head>
-  <body>
-    <h1>Here is a list of posts for a user</h1>
-  </body>
-</html>
+<%= render "shared/user_link", user: @user %>
+<section>
+  <% @posts.each do |post| %>
+    <%= render "shared/post_link", post: post['post'], user: @user %>
+    <div class="post_comments">
+      <% post['comments'].each do |comment| %>
+        <p>
+          <span><%= comment['name'] %></span>:
+          <span><%= comment['text'] %></span>
+        </p>
+      <% end %>
+      <% if post['comments'].length == 0 %>
+        <p>No comments yet</p>
+      <% end %>
+    </div>
+  <% end %>
+</section>

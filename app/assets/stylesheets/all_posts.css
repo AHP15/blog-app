@@ -1,0 +1,7 @@
+.post_comments {
+  border: 2px solid black;
+  border-radius: 0 0 5px 5px;
+  margin: 5px;
+  padding: 15px;
+  margin-bottom: 40px;
+}
