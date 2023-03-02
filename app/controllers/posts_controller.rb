@@ -14,7 +14,13 @@ class PostsController < ApplicationController
 
   def show
     @post = Post.find(params[:id])
-    @comments = @post.last_post_comments(@post.id)
+    @comments = Comment.where(post_id: @post.id)
+
+    @comments = @comments.map do |comment|
+      comment_user = User.find(comment.user_id)
+      { 'name' => comment_user.name, 'text' => comment.text }
+    end
+
     @user = User.find(@post.user_id)
 
     render 'show'
