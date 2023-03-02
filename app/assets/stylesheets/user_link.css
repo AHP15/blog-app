@@ -18,7 +18,6 @@
   height: 150px;
   object-fit: contain;
   box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.3);
-  height: fit-content;
 }
 
 .user_link .user_info {
