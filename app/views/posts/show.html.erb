@@ -1,9 +1,21 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <title>index</title>
-  </head>
-  <body>
-    <h1>Here is a post content</h1>
-  </body>
-</html>
+<section class="post_content">
+  <h3>
+    <span><%= @post.title %> by</span>
+    <a href=<%= "/users/#{@user.id}" %>><%= @user.name %></a>
+  </h3>
+
+  <p class="content_counters">Comments: <%= @post.comments_counter %>, Likes: <%= @post.likes_counter %></p>
+
+  <p><%= @post.text %></p>
+</section>
+<section class="content_comments">
+  <% @comments.each do |comment| %>
+    <p>
+      <span><%= comment['name'] %></span>:
+      <span><%= comment['text'] %></span>
+    </p>
+  <% end %>
+  <% if @comments.length == 0 %>
+    <p>No comments yet</p>
+  <% end %>
+</section>

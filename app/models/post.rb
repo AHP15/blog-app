@@ -12,6 +12,13 @@ class Post < ApplicationRecord
   end
 
   def last_post_comments(post_id)
-    Comment.where(post_id:).last(5)
+    comments = Comment.where(post_id:).last(5)
+    results = []
+    comments.each do |comment|
+      name = User.find(comment.user_id).name
+      results.push({ 'name' => name, 'text' => comment.text })
+    end
+
+    results
   end
 end

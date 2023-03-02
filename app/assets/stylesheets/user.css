@@ -1,0 +1,15 @@
+.all_posts_link,
+.user_bio {
+  display: block;
+  text-decoration: none;
+  color: black;
+  border: 2px solid black;
+  border-radius: 5px;
+  padding: 10px 15px;
+  margin: 30px;
+  width: 100px;
+}
+
+.user_bio {
+  width: 70%;
+}

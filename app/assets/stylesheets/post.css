@@ -1,0 +1,15 @@
+.post_content,
+.content_comments {
+  border: 2px solid black;
+  margin: 5px;
+  padding: 15px;
+  transition: 0.3s;
+  border-radius: 5px;
+  position: relative;
+}
+
+.content_counters {
+  position: absolute;
+  top: 5px;
+  right: 10px;
+}
