@@ -13,3 +13,24 @@
   top: 5px;
   right: 10px;
 }
+
+form {
+  margin: 5px;
+  padding: 15px;
+  border-radius: 5px;
+  box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.3);
+}
+
+form textarea {
+  width: 250px;
+  border: 2px solid black;
+  border-radius: 5px;
+}
+
+.comment_link {
+  display: block;
+  margin: 5px;
+  padding: 15px;
+  border-radius: 5px;
+  box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.3);
+}

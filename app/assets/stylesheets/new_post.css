@@ -1,0 +1,33 @@
+.new_post {
+  width: 90%;
+  max-width: 500px;
+  box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.3);
+  border-radius: 5px;
+  margin: 30px auto;
+}
+
+.new_post form {
+  width: 100%;
+  padding: 15px;
+}
+
+.new_post form div {
+  margin-top: 20px;
+}
+
+.new_post form input,
+.new_post form textarea {
+  padding: 10px;
+  font-size: 17px;
+  width: 80%;
+  border: 2px solid black;
+  outline: none;
+}
+
+.new_post form textarea {
+  height: 300px;
+}
+
+.new_post form button {
+  cursor: pointer;
+}

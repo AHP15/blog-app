@@ -8,6 +8,16 @@
 
   <p><%= @post.text %></p>
 </section>
+
+<%= form_with model: @like, url: "/users/#{@user.id}/posts/#{@post.id}/likes" do |f|%>
+  <%= hidden_field(:post, :id) %>
+  <div>
+    <%= f.submit "Add Like" %>
+  </div>
+<% end %>
+
+<a class="comment_link" href=<%= "/users/#{@user.id}/posts/#{@post.id}/comments/new" %>>Add Comment</a>
+
 <section class="content_comments">
   <% @comments.each do |comment| %>
     <p>
