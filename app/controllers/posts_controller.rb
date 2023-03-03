@@ -34,7 +34,7 @@ class PostsController < ApplicationController
   def create
     title = params[:post]['title']
     text = params[:post]['text']
-    post = Post.new(user_id: current_user.id, title: title, text: text, comments_counter: 0, likes_counter: 0)
+    post = Post.new(user_id: current_user.id, title:, text:, comments_counter: 0, likes_counter: 0)
 
     if post.save
       flash[:success] = 'Post saved successfully'

@@ -3,7 +3,7 @@ class CommentsController < ApplicationController
     text = params[:comment]['text']
     post_id = params[:id]
     user_id = params[:user_id]
-    comment = Comment.new(user: current_user, post: Post.find(post_id), text: text)
+    comment = Comment.new(user: current_user, post: Post.find(post_id), text:)
     comment.increace_comments_count(post_id)
 
     if comment.save
