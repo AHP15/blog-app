@@ -1,0 +1,10 @@
+<%= form_with model: @comment, url: "/users/#{@user_id}/posts/#{@post_id}/comments", scope: :comment do |f|%>
+  <div>
+    <%= f.label :text %><br>
+    <%= text_area :comment, :text %>
+  </div>
+
+  <div>
+    <%= f.submit "Add Comment" %>
+  </div>
+<% end %>

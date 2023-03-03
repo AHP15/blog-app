@@ -1,4 +1,11 @@
 class CommentsController < ApplicationController
+  def new
+    @user_id = current_user.id
+    @post_id = params[:id]
+
+    render 'new'
+  end
+
   def create
     text = params[:comment]['text']
     post_id = params[:id]
