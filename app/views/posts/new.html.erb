@@ -1,0 +1,17 @@
+<div class="new_post">
+  <%= form_with model: @post, url: "/users/#{@id}/posts", scope: :post do |f|%>
+  <div>
+    <%= f.label :title %><br>
+    <%= f.text_field :title %>
+  </div>
+
+  <div>
+    <%= f.label :text %><br>
+    <%= text_area :post, :text %>
+  </div>
+
+  <div>
+    <%= f.submit "Add Post" %>
+  </div>
+<% end %>
+</div>

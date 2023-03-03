@@ -25,4 +25,23 @@ class PostsController < ApplicationController
 
     render 'show'
   end
+
+  def new
+    @id = current_user.id
+    render 'new'
+  end
+
+  def create
+    title = params[:post]['title']
+    text = params[:post]['text']
+    post = Post.new(user_id: current_user.id, title: title, text: text, comments_counter: 0, likes_counter: 0)
+
+    if post.save
+      flash[:success] = 'Post saved successfully'
+      redirect_to "/users/#{current_user.id}/posts"
+    else
+      flash.now[:error] = 'Error: Question could not be saved'
+      render 'new'
+    end
+  end
 end

@@ -8,6 +8,25 @@
 
   <p><%= @post.text %></p>
 </section>
+
+<%= form_with model: @like, url: "/users/#{@user.id}/posts/#{@post.id}/likes" do |f|%>
+  <%= hidden_field(:post, :id) %>
+  <div>
+    <%= f.submit "Add Like" %>
+  </div>
+<% end %>
+
+<%= form_with model: @comment, url: "/users/#{@user.id}/posts/#{@post.id}/comments", scope: :comment do |f|%>
+  <div>
+    <%= f.label :text %><br>
+    <%= text_area :comment, :text %>
+  </div>
+
+  <div>
+    <%= f.submit "Add Comment" %>
+  </div>
+<% end %>
+
 <section class="content_comments">
   <% @comments.each do |comment| %>
     <p>
