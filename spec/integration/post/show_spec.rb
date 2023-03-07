@@ -6,7 +6,6 @@ RSpec.describe 'Posts', type: :system do
     expect(page).to have_content('test')
   end
 
-
   it 'I can see a post`s title' do
     visit '/users/108/posts/48'
     expect(page).to have_content('post title')
