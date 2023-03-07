@@ -17,7 +17,8 @@ RSpec.describe 'Posts', type: :system do
       name: 'test user4',
       photo: 'https://png.pngtree.com/png-vector/20190625/ourlarge/pngtree-business-male-user-avatar-vector-png-image_1511454.jpg',
       bio: 'bio text',
-      posts_counter: 0)
+      posts_counter: 0
+    )
     @comment = Comment.create(user_id: @user2.id, post_id: @post.id, text: 'comment text')
   end
 

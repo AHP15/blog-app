@@ -2,17 +2,11 @@ require 'rails_helper'
 
 RSpec.describe 'Users', type: :system do
   before :all do
-    @user = User.create(name: 'test user3',
+    @user = User.create(name: 'test',
                         photo: 'https://png.pngtree.com/png-vector/20190625/ourlarge/pngtree-business-male-user-avatar-vector-png-image_1511454.jpg',
-                        bio: 'bio text',
+                        bio: 'text',
                         posts_counter: 0)
-    @post1 = Post.create(
-      user_id: @user.id,
-      title: 'post title11',
-      text: 'post content',
-      comments_counter: 0,
-      likes_counter: 0
-    )
+    @post1 = Post.create(user_id: @user.id, title: 'post', text: 'post', comments_counter: 0, likes_counter: 0)
     @post2 = Post.create(
       user_id: @user.id,
       title: 'post title22',
