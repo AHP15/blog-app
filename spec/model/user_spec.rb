@@ -1,7 +1,7 @@
 require 'rails_helper'
 
 RSpec.describe User, type: :model do
-  subject { User.create(name: 'test user', photo: 'photo url', bio: 'bio text', posts_counter: 0) }
+  subject { User.create(name: 'test user', photo: 'https://png.pngtree.com/png-vector/20190625/ourlarge/pngtree-business-male-user-avatar-vector-png-image_1511454.jpg', bio: 'bio text', posts_counter: 0) }
 
   before { subject.save }
 
