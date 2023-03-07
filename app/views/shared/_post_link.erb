@@ -1,4 +1,4 @@
-<a href=<%= "/users/#{user.id}/posts/#{post.id}" %> class="post_link">
+<a id=<%= "#{post.id}"%> href=<%= "/users/#{user.id}/posts/#{post.id}" %> class="post_link">
   <h3><%= post.title %></h3>
   <p><%= "#{post.text.slice(0, 100)}..." %></p>
   <p class="counters">
