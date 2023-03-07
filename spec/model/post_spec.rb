@@ -2,7 +2,9 @@ require 'rails_helper'
 
 RSpec.describe Post, type: :model do
   before :all do
-    @user = User.create(name: 'test', posts_counter: 0)
+    @user = User.create(name: 'test',
+                        photo: 'https://png.pngtree.com/png-vector/20190625/ourlarge/pngtree-business-male-user-avatar-vector-png-image_1511454.jpg',
+                        posts_counter: 0)
     @post = Post.create(
       user_id: @user.id,
       title: 'post title',
