@@ -1,0 +1,121 @@
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+.errors {
+  text-align: center;
+  color: rgb(131, 69, 69);
+}
+
+h2 {
+  text-align: center;
+  margin: 1rem;
+}
+
+.new_user {
+  width: 100%;
+  max-width: 400px;
+  margin: auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Style for the form fields */
+.field {
+  margin-bottom: 10px;
+}
+
+/* Style for the labels */
+label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+/* Style for the input fields */
+input[type="email"],
+input[type="text"],
+input[type="password"] {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+.remember-me {
+  display: flex;
+  align-items: center;
+}
+
+.remember-me > label {
+  margin: 0;
+  font-size: 14px;
+  font-weight: 300;
+}
+
+/* Style for the "Remember me" checkbox */
+#user_remember_me {
+  margin: 0 5px 0 0;
+}
+
+/* Style for the submit button */
+input[type="submit"] {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 10px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.2s ease-in-out;
+}
+
+input[type="submit"]:hover {
+  background-color: #0062cc;
+}
+
+/* Style for the links */
+a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* Style for the form error messages */
+#error_explanation {
+  color: red;
+  margin-bottom: 20px;
+}
+
+#error_explanation ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+#error_explanation li {
+  margin: 0 0 10px 0;
+}
+
+/* Style for the sign up and forgot password links */
+.new_user a {
+  display: block;
+  margin-top: 10px;
+}
+
+.other-links {
+  padding: 1rem 0 0 0;
+}
+
+.other-links > a {
+  margin: 0 0 0.5rem 0;
+}
